@@ -68,7 +68,9 @@ public class Char : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isGrounded) State = States.idle;
+        if (isGrounded) {
+            State = States.idle;
+        }
         if (Input.GetButton("Horizontal")) Run();
         if (isGrounded && Input.GetButtonDown("Jump")) Jump();
     }
